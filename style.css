@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Montserrat&family=Mukta:wght@300;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: hsl(0, 0%, 41%);
+    font-family: 'League Spartan', sans-serif;
+    /* position: relative; */
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.body-cover{
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+    display: none;
+}
+
+.header{
+    padding: 0 2.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.logo{
+    padding-top: 0.5rem;
+}
+.nav-bar{
+    margin-left: 2rem;
+}
+.nav-bar>ul{
+    display: flex;
+
+    height: 100%;
+}
+.nav-bar>ul>li{
+    position: relative;
+}
+.nav-bar>ul>li>a{
+    display: block;
+    padding: 1.6rem 1.5rem;
+    height: 100%;
+}
+.nav-bar>ul>li>a:hover{
+    color: hsl(0, 0%, 8%);
+}
+.nav-bar>ul>li>ul{
+    display: none;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgb(224, 224, 224),-2px -2px 10px rgb(224, 224, 224);
+}
+.nav-bar>ul>li .active{
+    display: block;
+}
+.nav-bar>ul>li>ul a{
+    display: flex;
+    padding: 0.5rem 0;
+}
+.nav-bar>ul>li>ul a img{
+    margin-right: 0.8rem;
+}
+.d-none{
+    display: none;
+}
+.register-login{
+    margin-left: auto;
+}
+.register-login>a{
+    margin-left: 2rem;
+}
+.register-login .login:hover{
+    color: hsl(0, 0%, 8%);
+}
+.btn-outline{
+    padding: 0.7rem 1.2rem;
+    border-radius: 14px;
+    border: 1px solid hsl(0, 0%, 41%);
+}
+
+.btn-outline:hover{
+    color: hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 8%);
+}
+.hamburger-icon{
+    display: none;
+}
+.portal{
+    display: flex;
+    height: 87vh;
+    padding: 3rem 7rem;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.portal-description{
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 448px;
+
+}
+.portal-description h1{
+    font-size: 5rem;
+    color: hsl(0, 0%, 8%);
+}
+
+.portal .desktop-image{
+    height: 100%;
+    min-height: 448px;
+}
+.portal .mobile-image{
+    display: none;
+}
+.portal-paragraph{
+    max-width: 380px;
+    font-size: 1.1rem;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+
+
+
+
+@media (max-width:1040px) {
+    .header{
+        padding: 0 1rem;
+    }
+    .nav-bar{
+        display: none;
+    }
+    .register-login{
+        display: none;
+    }
+    .hamburger-icon{
+        display: block;
+        margin-left: auto;
+        padding: 1.4rem 0;
+    }
+    .hamburger-icon:hover{
+        cursor: pointer;
+    }
+    .portal{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .portal-description{
+        order: 2;
+        align-items: center;
+        padding: 20px;
+        min-height: 300px;
+        text-align: center;
+        width: 100%;
+    }
+    .portal-image{
+        order: 1;
+        height: 50vh;
+        width: 100%;
+    }
+    .portal .desktop-image{
+        display: none;
+    }
+    .portal .mobile-image{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    .portal-description h1{
+        font-size: 2rem;
+    }
+    .portal-description h1 br{
+        display: none;
+    }
+    .portal-logos{
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .portal-logos img{
+        width: 23%;
+    }
+
+    .btn-outline{
+        padding: 0.7rem 1.2rem;
+        border-radius: 14px;
+        background-color: #000;
+        color: #fff;
+        /* border: 1px solid hsl(0, 0%, 41%); */
+    }
+    
+    .btn-outline:hover{
+        color: #fff;
+        /* color: hsl(0, 0%, 8%); */
+        border: 1px solid hsl(0, 0%, 8%);
+    }
+
+
+
+    .mobile-menu{
+        position: fixed;
+        right: 0;
+        top: 0;
+        /* bottom: 0; */
+        width: 260px;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 999;
+        padding: 1.2rem;
+        /* display: flex; */
+        flex-direction: column; 
+        display: none;
+    }
+    .d-flex{
+        display: flex;
+    }
+    .mobile-menu .close-icon{
+        align-self: flex-end;
+        margin-bottom: 1rem;
+    }
+    .mobile-menu .close-icon:hover{
+        cursor: pointer;
+    }
+    .mobile-menu .mobile-nav-bar>ul>li{
+        padding: 0.7rem 0;
+    }
+    .mobile-menu .mobile-register-login{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mobile-menu .mobile-register-login a{
+        margin: 0.5rem 0;
+    }
+    .mobile-btn-outline{
+        /* padding: 0.7rem 4rem; */
+        padding: 0.7rem 0;
+        min-width: 180px;
+        border-radius: 14px;
+        border: 1px solid hsl(0, 0%, 41%);
+        text-align: center;
+    }
+    
+    .mobile-btn-outline:hover{
+        color: hsl(0, 0%, 8%);
+        border: 1px solid hsl(0, 0%, 8%);
+    }
+    .mobile-nav-bar>ul>li>a:hover{
+        color: hsl(0, 0%, 8%);
+    }
+    .mobile-nav-bar>ul>li>ul{
+        display: none;
+        padding-top: 0.5rem;
+    }
+    .mobile-nav-bar>ul>li .active{
+        display: block;
+    }
+    .mobile-nav-bar>ul>li>ul>li{
+        padding: 0.6rem 0 0.6rem 1rem;
+    }
+    .mobile-nav-bar>ul>li>ul>li img{
+        margin-right: 0.6rem;
+    }
+    .body-cover.active{
+        display: block;
+    }
+}
